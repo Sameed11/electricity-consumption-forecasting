@@ -195,6 +195,8 @@ is listed under known limitations rather than quietly dropped.
 ├── notebooks/
 │   ├── 01_modelling.ipynb       # cleaning, features, baselines, backtest
 │   └── 02_error_analysis.ipynb  # diagnostics, regime shift, intervals, LSTM
+├── data/                # dataset (place the CSV here)
+├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
@@ -264,5 +266,4 @@ seasonal-lag features joined at the head.
 ## Data source
 
 Hourly Turkish electricity consumption, 2015–2020 (EPİAŞ / Turkish Electricity
-Transmission Corporation). The CSV is not committed; place it in `data/` before
-running.
+Transmission Corporation). The dataset is committed under `data/` for reproducibility.
