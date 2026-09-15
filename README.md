@@ -140,6 +140,33 @@ The mechanism is the feature importance table. A model that is 52% `lag_168` and
 shifts within days, those references are stale. Persistence survived precisely
 because `t−1` tracks the new regime immediately.
 
+### Why demand fell while people stayed home
+
+A drop is counterintuitive at first: lockdown put more people at home using more
+appliances. The resolution is that households are a minority of national load.
+Turkish electricity consumption in 2020 split roughly 44.9% industrial, 26.7%
+services, 23.5% residential and 4.4% agricultural, so commercial and industrial
+demand together account for close to three quarters of the total. Idled factories
+and closed offices, shops and hotels outweighed the residential increase several
+times over.
+
+Both effects are visible in the hourly bias reported earlier, which is why that
+pattern is systematic rather than noise:
+
+| Hours | Bias | Interpretation |
+|---|---|---|
+| 07–16 | up to **+155.6** MWh | over-forecast — industrial and commercial load absent |
+| 00–05 | up to **−129.1** MWh | under-forecast — residential load above what history implies |
+
+The model did not simply see demand fall; it saw the daily curve change shape,
+draining out of working hours and partially reappearing overnight. A model trained
+on pre-pandemic data kept projecting the old daytime peak.
+
+Season matters too. The shock window falls in April–June, when Turkish heating
+demand is winding down, and cooling demand has not begun. Turkish load peaks in
+summer on air conditioning, so an equivalent lockdown in July would have produced a
+larger residential offset and a smaller net drop.
+
 ### Mitigation: retraining cadence
 
 Same model, same features, same evaluation window. Only the deployment cadence
