@@ -1,0 +1,18 @@
+# Core
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.4
+matplotlib>=3.7
+
+# Modelling
+lightgbm>=4.0
+statsmodels>=0.14
+holidays>=0.40
+
+# Deep learning benchmark (CPU build)
+# pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.0
+
+# Development
+pytest>=7.0
+jupyter>=1.0
