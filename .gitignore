@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+env/
+mlflow_store/
+outputs/
+*.pkl
+*.joblib
+.DS_Store
+.vscode/
+.idea/
