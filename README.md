@@ -87,7 +87,7 @@ Feature families:
 
 **Four models on identical folds:**
 
-- **Ridge regression** — a linear model on the engineered features. Cheap. Shows how much of the signal is linear.
+- **Ridge Regression** — a linear model on the engineered features. Cheap. Shows how much of the signal is linear.
 - **Random Forest** — sklearn `RandomForestRegressor`, tuned `min_samples_leaf=5`.
 - **LightGBM** — the production choice. 1,200 trees, 63 leaves, 5% learning rate.
 - **LSTM (PyTorch)** — 72-hour sequence + calendar features joined at the head, single-layer, 64 hidden units, early stopping on a held-out training tail.
